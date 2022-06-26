@@ -1,0 +1,432 @@
+*{
+	margin: 0 0;
+	padding: 0 0;
+}
+
+/* For Heading*/
+
+header{
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	border-bottom: 1px solid lightgrey;
+
+	position: fixed;
+	top: 0px;
+
+	z-index: 99;
+
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+
+	justify-items: space-between;
+	align-content: center;
+}
+
+header > .logo, header > .mobilebutton{
+	display: none;
+}
+
+img{
+	width: 25px;
+	height: 25px;
+}
+
+.search{
+	grid-column: 1 / 2;
+
+	margin: 0 0.5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchbar{
+	height: 45px;
+	width: 95%;
+	border-radius: 20px;
+	border: none;
+	padding: 0 1rem;
+	background-color: lightgrey;
+}
+
+.searchbar::placeholder{
+	font-family: 'PT sans', sans-serif;
+}
+
+.newfeed{
+	grid-column: 2 / 3;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.btnBackground{
+	width:100px;
+	height:60px;
+	margin:0 0.2	5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btnBackground:hover{
+	background-color: lightgrey;
+}
+
+.side{
+	grid-column: 3 / 4;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebtnBackground{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	margin: 0 0.25rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.sidebtnBackground:hover{
+	background-color: lightgrey;
+}
+
+/* For Main*/
+
+main{
+	width: 100%;
+	height: 100vh;
+
+	display: grid;
+	grid-template-columns: 22.5% 55% 22.5%;
+}
+
+/* Navigation Bar*/
+
+.nav{
+	grid-column: 1 / 2;
+
+	width: 22.5%;
+	height: auto;
+
+	position: fixed;
+	left: 0px;
+	top: 60px;
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	justify-content: flex-start;
+	align-items: center;
+	
+}
+
+.nav > div {
+	width: 100%;
+	height: 50px;
+
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+
+	transition: height 250ms ease-in-out 0s;
+}
+
+#homelabel{
+	margin: 0 2rem;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.nav > [class$="s"]:hover{
+	background-color: lightgrey;
+	height: 57.5px;
+}
+
+.nav > div > img{
+	margin: 0 1.25rem 0 1.75rem;
+}
+
+.nav > div > label{
+	font-family: 'PT Sans', sans-serif;
+}
+
+/* Main Content*/
+
+.content{
+	grid-column: 2 / 3;
+	background-color: lightgrey;
+
+	width: 55%;
+	height: auto;
+	position: absolute;
+	top: 60px;
+	left: 22.5%;
+	right: 22.5%;
+
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.stories{
+	width: 90%;
+	height: 225px;
+	border-radius: 5px;
+	margin: 1.5rem 0;
+
+	background-color: white;
+
+}
+
+.upload{
+	width: 82.5%;
+	height: 80px;
+	border-radius: 5px;
+	margin: 0 0;
+
+	background-color: white;
+}
+
+.posts{
+	width: 82.5%;
+	height: 450px;
+	border-radius: 5px;
+	margin: 1.25rem 0;
+
+	background-color: white;
+}
+
+/* Contacts*/
+
+.contacts{
+	grid-column: 3 / 4;
+	width: 22.5%;
+	height: auto;
+
+	position: fixed;
+	top: 60px;
+	right: 0px;
+		
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+.contacts > div{
+	width: 100%;
+	height: 50px;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	transition: height 250ms ease-in-out 0s;
+}
+
+#contactlabel{
+	margin: 0 2rem;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.contacts > div > img{
+	margin: 0 1.25rem 0 1.75rem;
+}
+
+.contacts > div > label{
+	font-family: 'PT Sans', sans-serif;
+}
+
+.contacts > [class$="s"]:hover{
+	height: 57.5px;
+	background-color: lightgrey;
+}
+
+/* For Footer*/
+
+footer{
+	display: none;
+}
+
+/* Tablet View*/
+
+@media only screen and (max-width: 820px){
+	
+	header > .search , header > .newfeed, header > .side{
+		display: none;
+	}
+
+	header{
+		height: 60px;
+
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header > .logo, header > .mobilebutton{
+		display: inline-block;
+	}
+
+	header > .logo{
+		color: #2155CD;
+		font-size: 2.5rem;
+		font-weight: bold;
+		font-family: 'Poppins', sans-serif;
+
+		margin: 0 2.5rem;
+	}
+
+	header  img{
+		width: 30px;
+		height: 30px;
+	}
+
+	header > .mobilebutton{
+		width: 150px;
+		height: 70px;
+		margin: 0 1rem;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.mobilebutton > .btn{
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: whitesmoke;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.btn:hover{
+		background-color: lightgrey;
+	}
+
+	main > .nav, main > .contacts{
+		display: none;
+	}
+
+	main{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.content{
+		width: 100%;
+		padding-bottom: 80px;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+	}
+
+	footer{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: center;
+
+		width: 100%;
+		height: 60px;
+		background-color: white;
+		position: fixed;
+		bottom: 0px;
+	}
+
+	footer > div > img{
+		width: 30px;
+		height: 30px;
+	}
+
+
+	.footbtn{
+		width: 20%;
+		height: 60px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footbtn:hover{
+		background-color: lightgrey;
+	}
+}
+
+/* Mobile View*/
+
+@media only screen and (max-width: 425px){
+	header > .logo{
+		font-size: 1.75rem;
+		margin: 0 0.75rem;
+	}
+
+	header > .mobilebutton > .btn > img{
+		width: 25px;
+		height: 25px;
+	}
+
+	header{
+		justify-content: space-between;
+	}
+
+	header > .mobilebutton{
+		width: 120px;
+		margin: 0 0.25rem;
+	}
+
+	.mobilebutton > .btn{
+		width: 45px;
+		height: 45px;
+	}
+
+	.content > .stories{
+		width: 92.5%;
+	}
+
+	.content > .upload , .content > .posts{
+		width: 87.5%;
+	}
+
+	.content > .upload{
+		margin-bottom: 0.75rem;
+	}
+
+	.content > .posts{
+		height: 325px;
+		margin: 0.75rem 0;
+	}
+
+	footer > .footbtn > img{
+		width: 25px;
+		height: 25px;
+	}
+}
