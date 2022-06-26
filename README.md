@@ -1,2 +1,2 @@
 # Social-Media-Website-Project
-Social Media Responsive Website Made by HTML and CSS
+Social Media Website Clone Made by using Pure HTML, CSS and Javascript
